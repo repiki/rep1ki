@@ -1,0 +1,1 @@
+import Link from"next/link";export default function NotFound(){return <section className="not-found"><div><span>404</span><h1>Эта страница<br/>ушла в движение.</h1><Link className="btn dark" href="/">Вернуться на главную</Link></div></section>}

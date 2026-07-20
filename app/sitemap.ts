@@ -1,0 +1,1 @@
+import type{MetadataRoute}from"next";export default function sitemap():MetadataRoute.Sitemap{return["","/works","/works/repiki-portfolio","/services","/about","/process","/contact"].map(url=>({url:`https://repiki.dev${url}`,lastModified:new Date()}))}

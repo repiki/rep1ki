@@ -1,0 +1,35 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# next.js
+.next/
+out/
+
+# production
+build/
+dist/
+
+# diagnostics
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# local env
+.env
+.env*.local
+
+# codex/local workspace artifacts
+.codex/
+.agents/
+outputs/
+work/
+console.dir(x
+
+# os/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
