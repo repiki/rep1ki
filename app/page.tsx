@@ -76,10 +76,19 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="ticker" aria-hidden="true">
-        <span>дизайн · разработка · движение · характер · дизайн · разработка · движение · характер · </span>
+      <div className="ticker" aria-label="Перейти к процессу работы">
+        <div className="ticker-track">
+          {[0, 1].map((group) => (
+            <div className="ticker-group" aria-hidden={group === 1} key={group}>
+              {["Дизайн", "Разработка", "Движение", "Характер"].map((word) => (
+                <Link className="ticker-link" href="/process" key={`${group}-${word}`} tabIndex={group === 1 ? -1 : undefined}>
+                  {word}<span aria-hidden="true">·</span>
+                </Link>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
-
       <section className="section positioning">
         <div className="shell">
           <p className="eyebrow">Зачем REPIKI</p>
