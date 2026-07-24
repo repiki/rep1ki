@@ -4,7 +4,12 @@ import { projects, services } from "@/data/site";
 import { ClippedCircle } from "@/components/unlumen-ui/primitives/clipped-circle";
 
 function WorkCard({ p }: { p: (typeof projects)[number] }) {
-  const circleTone = p.accent === "aqua" ? "clipped-circle--aqua" : "clipped-circle--violet";
+  const circleTone =
+    p.accent === "aqua"
+      ? "clipped-circle--aqua"
+      : p.accent === "night"
+        ? "clipped-circle--night"
+        : "clipped-circle--violet";
   const content = (
     <>
       <div className="work-card-top">

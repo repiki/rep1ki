@@ -662,6 +662,14 @@
     linear-gradient(135deg, rgba(85, 194, 255, .58), rgba(139, 92, 246, .82), rgba(219, 190, 255, .72));
 }
 
+.clipped-circle--night {
+  --circle-opacity: .9;
+  mix-blend-mode: screen;
+  background:
+    radial-gradient(circle at 30% 28%, rgba(255, 224, 224, .9), transparent 13%),
+    linear-gradient(135deg, rgba(255, 68, 82, .94), rgba(177, 18, 36, .9) 56%, rgba(61, 8, 15, .92));
+}
+
 .clipped-circle--dark {
   --circle-opacity: .78;
   mix-blend-mode: screen;
@@ -693,6 +701,12 @@
     box-shadow:
       0 26px 65px rgba(85, 194, 255, .16),
       0 16px 42px rgba(139, 92, 246, .12);
+  }
+
+  .work-card.night.clipped-target:hover {
+    box-shadow:
+      0 26px 65px rgba(190, 22, 40, .24),
+      0 12px 34px rgba(12, 12, 16, .18);
   }
 
   .signal-options a.clipped-target:hover {
@@ -888,6 +902,25 @@
 .case-mosaic-card--2 { background: var(--sky); }
 .case-mosaic:hover .case-mosaic-track { animation-play-state: paused; }
 @keyframes case-mosaic-loop { to { transform: translateX(calc(-50% - 6px)); } }
+
+.work-card.night {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(218, 31, 52, .24), transparent 34%),
+    linear-gradient(145deg, #1a1013, #070708 72%);
+  color: #fff;
+}
+
+.night .work-shape {
+  background:
+    radial-gradient(circle at 34% 26%, rgba(255, 126, 135, .72), transparent 13%),
+    linear-gradient(135deg, #e62b44, #871326 58%, #26070d);
+  border-radius: 44% 56% 52% 48% / 52% 42% 58% 48%;
+  transform: rotate(-8deg);
+  box-shadow: 0 24px 70px rgba(202, 23, 45, .3);
+}
+
+.night .work-shape span { text-shadow: 0 8px 26px rgba(0, 0, 0, .4); }
+.night p { color: rgba(255, 255, 255, .62); }
 
 @media (max-width: 640px) {
   .ticker-link { padding: .9rem 1rem; font-size: 11px; }

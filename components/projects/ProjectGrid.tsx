@@ -8,7 +8,11 @@ export function ProjectGrid() {
     <div className="works-grid catalog">
       {projects.map((project) => {
         const circleTone =
-          project.accent === "aqua" ? "clipped-circle--aqua" : "clipped-circle--violet";
+          project.accent === "aqua"
+            ? "clipped-circle--aqua"
+            : project.accent === "night"
+              ? "clipped-circle--night"
+              : "clipped-circle--violet";
         const content = (
           <>
             <div className="work-card-top">
